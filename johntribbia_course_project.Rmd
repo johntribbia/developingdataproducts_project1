@@ -1,0 +1,22 @@
+---
+title: 'Course Project I: R Markdown and Leaflet'
+author: "John Tribbia"
+date: "7/24/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## This assignment is a webpage that features a map created with the Leaflet package in R. The sourcefile uses R Markdown. 
+### My Favorite Peak in Boulder, Colorado
+
+
+```{r leaflet}
+library(leaflet)
+my_peak <- leaflet() %>% addTiles() 
+my_peak <- my_peak %>% addMarkers(lat=39.96022, lng= -105.295158, popup="My Favorite Peak in Boulder, Colorado")
+my_peak
+```
+
